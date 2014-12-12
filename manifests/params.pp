@@ -10,7 +10,7 @@ class jboss::params {
         fail("${module_name} only supports RedHat 5 and 6")
       }
       $package_name = 'jboss-eap6'
-      $service_name = 'jboss'
+      $service_name = 'jbossas'
       $user = 'jboss'
       $group = 'jboss'
     }
