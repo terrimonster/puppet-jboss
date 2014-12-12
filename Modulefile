@@ -1,0 +1,10 @@
+name          'puppet-jboss'
+version       '0.1.0'
+source        'https://github.com/terrimonster/puppet-jboss.git'
+author        'Terri Haber'
+license       'Apache 2.0'
+summary       'Installs and manages Jboss'
+description   ''
+project_page  'https://github.com/terrimonster/puppet-jboss'
+
+dependency 'puppetlabs/stdlib'

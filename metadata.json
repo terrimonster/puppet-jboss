@@ -1,0 +1,16 @@
+{
+  "name": "puppet-jboss",
+  "version": "0.1.0",
+  "author": "Terri Haber",
+  "summary": "Installs and manages Jboss",
+  "license": "Apache 2.0",
+  "source": "https://github.com/terrimonster/puppet-jboss.git",
+  "project_page": "https://github.com/terrimonster/puppet-jboss",
+  "issues_url": "https://github.com/terrimonster/puppet-jboss/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 1.0.0"
+    }
+  ]
+}
