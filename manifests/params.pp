@@ -5,16 +5,17 @@
 #
 class jboss::params {
   case $::osfamily {
-    'Debian': {
-      $package_name = 'jboss'
+    'RedHat': {
+      unless $::operatingsystemmajrelease =~ /(5|6)/ {
+        fail("${module_name} only supports RedHat 5 and 6")
+      }
+      $package_name = 'jboss-eap6'
       $service_name = 'jboss'
-    }
-    'RedHat', 'Amazon': {
-      $package_name = 'jboss'
-      $service_name = 'jboss'
+      $user = 'jboss'
+      $group = 'jboss'
     }
     default: {
-      fail("${::operatingsystem} not supported")
+      fail("${module_name} currently does not support ${::osfamily}")
     }
   }
 }

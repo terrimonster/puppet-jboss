@@ -1,5 +1,4 @@
-This module has grown over time based on a range of contributions from
-people using it. If you follow these contributing guidelines your patch
+If you follow these contributing guidelines your patch
 will likely make it into a release a little quicker.
 
 
@@ -86,4 +85,3 @@ If you don't want to have to recreate the virtual machine every time you
 can use `BEAKER_DESTROY=no` and `BEAKER_PROVISION=no`. On the first run you will
 at least need `BEAKER_PROVISION` set to yes (the default). The Vagrantfile
 for the created virtual machines will be in `.vagrant/beaker_vagrant_files`.
-

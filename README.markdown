@@ -16,9 +16,7 @@
 This module is under development. Please do not use it yet.
 ## Module Description
 
-If applicable, this section should have a brief description of the technology the module integrates with and what that integration enables. This section should answer the questions: "What does this module *do*?" and "Why would I use it?"
-
-If your module has a range of functionality (installation, configuration, management, etc.) this is the time to mention it.
+This module will install Jboss 6 on RHEL 5 or 6. Jboss is a mean beast so I'm starting with a limited installation for now but will expand later.
 
 ## Setup
 
@@ -26,21 +24,25 @@ If your module has a range of functionality (installation, configuration, manage
 
 * A list of files, packages, services, or operations that the module will alter, impact, or execute on the system it's installed on.
 * This is a great place to stick any warnings.
-* Can be in list or paragraph form. 
+* Can be in list or paragraph form.
 
-### Setup Requirements **OPTIONAL**
+### Setup Requirements
 
-If your module requires anything extra before setting up (pluginsync enabled, etc.), mention it here. 
+If you are installing JBoss using the RPM method, you'll need to subscribe the target node(s) to the proper channel. If you are using zip, I recommend creating a fileserver using fileserver.conf and storing the zip file in that location from access.redhat.com.
 
 ### Beginning with jboss
 
-The very basic steps needed for a user to get the module up and running. 
+The very basic steps needed for a user to get the module up and running.
 
 If your most recent release breaks compatibility or requires particular steps for upgrading, you may wish to include an additional section here: Upgrading (For an example, see http://forge.puppetlabs.com/puppetlabs/firewall).
 
 ## Usage
 
-Put the classes, types, and resources for customizing, configuring, and doing the fancy stuff with your module here. 
+class { 'jboss':
+  version => '6.1.1',
+  install_method => 'zip',
+  install_src = 'puppet://mount/profile/jboss_eap.zip',
+}
 
 ## Reference
 
@@ -48,12 +50,8 @@ Here, list the classes, types, providers, facts, etc contained in your module. T
 
 ## Limitations
 
-This is where you list OS compatibility, version compatibility, etc.
+RedHat Enterprise Linux v. 5 or 6.
 
 ## Development
 
-Since your module is awesome, other users will want to play with it. Let them know what the ground rules for contributing are.
-
-## Release Notes/Contributors/Etc **Optional**
-
-If you aren't using changelog, put your release notes here (though you should consider using changelog). You may also add any additional sections you feel are necessary or important to include here. Please use the `## ` header. 
+Pull requests encouraged!
