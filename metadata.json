@@ -9,7 +9,7 @@
   "issues_url": "https://github.com/terrimonster/puppet-jboss/issues",
   "dependencies": [
     {
-      "name": "puppet-yumgroup",
+      "name": "terrimonster-yumgroup",
       "version_requirement": "= 0.1.0"
     },
     {
