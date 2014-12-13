@@ -9,7 +9,7 @@ class jboss::params {
       unless $::operatingsystemmajrelease =~ /(5|6)/ {
         fail("${module_name} only supports RedHat 5 and 6")
       }
-      $package_name = 'jboss-eap6'
+      $package_name = 'JBoss EAP 6'
       $service_name = 'jbossas'
       $user = 'jboss'
       $group = 'jboss'
